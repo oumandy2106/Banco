@@ -9,25 +9,22 @@ public class Banco {
         this.saldo = saldo;
     }
 
-    public double Deposito(){
+    public void Deposito(){
         System.out.println("Usted eligio: Depósito. Escoja por favor la cantidad a depósitar");
         double depositar = cantidad.nextDouble();
         saldo = saldo + depositar;
         System.out.println("Su saldo despúes del deposito es: " +  saldo);
-        return saldo;
     }
 
-    public double Retiro(){
+    public void Retiro(){
         double retirar = cantidad.nextDouble();
         saldo = saldo - retirar;
         System.out.println("Su saldo despúes del retiro es: " +  saldo);
-        return saldo;
+
     }
 
     public void Consulta(){
         System.out.println("Su saldo despúes es: " +  saldo);
     }
-
-
 
 }
