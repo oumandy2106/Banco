@@ -27,4 +27,10 @@ public class Banco {
         System.out.println("Su saldo despúes es: " +  saldo);
     }
 
+    public void Regresar(){
+        System.out.println("Regresando al menu principal");
+        Menu menu = new Menu();
+        menu.mostrarMenu();
+    }
+
 }
