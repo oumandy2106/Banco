@@ -1,19 +1,25 @@
+import java.util.Scanner;
+
 public class Banco {
     private double saldo;
-    private double cantidad;
+    Scanner scanner = new Scanner(System.in);
+    Scanner cantidad = new Scanner(System.in);
 
     public Banco(double saldo){
         this.saldo = saldo;
     }
 
     public double Deposito(){
-        saldo = saldo + cantidad;
+        System.out.println("Usted eligio: Depósito. Escoja por favor la cantidad a depósitar");
+        double depositar = cantidad.nextDouble();
+        saldo = saldo + depositar;
         System.out.println("Su saldo despúes del deposito es: " +  saldo);
         return saldo;
     }
 
     public double Retiro(){
-        saldo = saldo - cantidad;
+        double retirar = cantidad.nextDouble();
+        saldo = saldo - retirar;
         System.out.println("Su saldo despúes del retiro es: " +  saldo);
         return saldo;
     }
@@ -22,19 +28,6 @@ public class Banco {
         System.out.println("Su saldo despúes es: " +  saldo);
     }
 
-    public double getSaldo() {
-        return saldo;
-    }
 
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
-    }
 
-    public double getCantidad() {
-        return cantidad;
-    }
-
-    public void setCantidad(double cantidad) {
-        this.cantidad = cantidad;
-    }
 }
